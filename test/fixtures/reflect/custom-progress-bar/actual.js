@@ -1,4 +1,3 @@
-// https://webkit.org/wp-content/uploads/custom-element-demo.html
 class CustomProgressBar extends HTMLElement {
   constructor() {
     super();

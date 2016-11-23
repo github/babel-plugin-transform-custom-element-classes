@@ -14,48 +14,72 @@ function _CustomElement() {
 Object.setPrototypeOf(_CustomElement.prototype, HTMLElement.prototype);
 Object.setPrototypeOf(_CustomElement, HTMLElement);
 
-let CustomProgressBar = function (_CustomElement2) {
-  _inherits(CustomProgressBar, _CustomElement2);
+let AppDrawer = function (_CustomElement2) {
+  _inherits(AppDrawer, _CustomElement2);
 
-  function CustomProgressBar() {
-    _classCallCheck(this, CustomProgressBar);
+  _createClass(AppDrawer, [{
+    key: 'open',
 
-    var _this = _possibleConstructorReturn(this, (CustomProgressBar.__proto__ || Object.getPrototypeOf(CustomProgressBar)).call(this));
 
-    const shadowRoot = _this.attachShadow({ mode: 'closed' });
-    shadowRoot.innerHTML = `
-      <style>
-        :host { display: inline-block; width: 5rem; height: 1rem; }
-        .progress { display: inline-block; position: relative; border: solid 1px #000; padding: 1px; width: 100%; height: 100%; }
-        .progress > .bar { background: #9cf; height: 100%; }
-        .progress > .label { position: absolute; top: 0; left: 0; width: 100%;
-          text-align: center; font-size: 0.8rem; line-height: 1.1rem; }
-      </style>
-      <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-        <div class="bar" style="width: 0px;"></div>
-        <div class="label">0%</div>
-      </div>
-    `;
-    _this._progressElement = shadowRoot.querySelector('.progress');
-    _this._label = shadowRoot.querySelector('.label');
-    _this._bar = shadowRoot.querySelector('.bar');
+    // A getter/setter for an open property.
+    get: function () {
+      return this.hasAttribute('open');
+    },
+    set: function (val) {
+      // Reflect the value of the open property as an HTML attribute.
+      if (val) {
+        this.setAttribute('open', '');
+      } else {
+        this.removeAttribute('open');
+      }
+      this.toggleDrawer();
+    }
+
+    // A getter/setter for a disabled property.
+
+  }, {
+    key: 'disabled',
+    get: function () {
+      return this.hasAttribute('disabled');
+    },
+    set: function (val) {
+      // Reflect the value of the disabled property as an HTML attribute.
+      if (val) {
+        this.setAttribute('disabled', '');
+      } else {
+        this.removeAttribute('disabled');
+      }
+    }
+
+    // Can define constructor arguments if you wish.
+
+  }]);
+
+  function AppDrawer() {
+    _classCallCheck(this, AppDrawer);
+
+    // Setup a click listener on <app-drawer> itself.
+    var _this = _possibleConstructorReturn(this, (AppDrawer.__proto__ || Object.getPrototypeOf(AppDrawer)).call(this));
+    // If you define a ctor, always call super() first!
+    // This is specific to CE and required by the spec.
+
+
+    _this.addEventListener('click', e => {
+      // Don't toggle the drawer if it's disabled.
+      if (_this.disabled) {
+        return;
+      }
+      _this.toggleDrawer();
+    });
     return _this;
   }
 
-  _createClass(CustomProgressBar, [{
-    key: 'progress',
-    get: function () {
-      return this._progressElement.getAttribute('aria-valuenow');
-    },
-    set: function (newPercentage) {
-      this._progressElement.setAttribute('aria-valuenow', newPercentage);
-      this._label.textContent = newPercentage + '%';
-      this._bar.style.width = newPercentage + '%';
-    }
+  _createClass(AppDrawer, [{
+    key: 'toggleDrawer',
+    value: function toggleDrawer() {}
   }]);
 
-  return CustomProgressBar;
+  return AppDrawer;
 }(_CustomElement);
 
-;
-customElements.define('custom-progress-bar', CustomProgressBar);
+customElements.define('app-drawer', AppDrawer);
