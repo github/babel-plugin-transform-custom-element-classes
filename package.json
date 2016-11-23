@@ -1,0 +1,33 @@
+{
+  "name": "babel-plugin-transform-custom-element-classes",
+  "version": "0.0.1",
+  "description": "Compile ES6 HTMLElement class extensions to ES5",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "GitHub, Inc",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github/babel-plugin-transform-custom-element-classes.git"
+  },
+  "keywords": [
+    "babel-plugin"
+  ],
+  "bugs": {
+    "url": "https://github.com/github/babel-plugin-transform-custom-element-classes/issues"
+  },
+  "homepage": "https://github.com/github/babel-plugin-transform-custom-element-classes#readme",
+  "dependencies": {
+    "babel-template": "^6.16.0"
+  },
+  "devDependencies": {
+    "babel-helper-plugin-test-runner": "^6.18.0",
+    "babel-plugin-transform-es2015-classes": "^6.18.0",
+    "mocha": "^3.1.2"
+  }
+}
