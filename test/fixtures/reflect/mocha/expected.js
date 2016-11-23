@@ -18,7 +18,10 @@ suite("FlagIcon", function () {
     function FlagIcon() {
       _classCallCheck(this, FlagIcon);
 
-      return _possibleConstructorReturn(this, (FlagIcon.__proto__ || Object.getPrototypeOf(FlagIcon)).apply(this, arguments));
+      var _this = _possibleConstructorReturn(this, (FlagIcon.__proto__ || Object.getPrototypeOf(FlagIcon)).call(this));
+
+      _this._constructorDidRun = true;
+      return _this;
     }
 
     return FlagIcon;
@@ -31,6 +34,7 @@ suite("FlagIcon", function () {
     chai.assert(icon instanceof HTMLElement);
     chai.assert(icon instanceof FlagIcon);
     chai.assert.equal(icon.tagName, "FLAG-ICON");
+    chai.assert.equal(icon._constructorDidRun, true);
   });
 
   test("constructor", function () {
@@ -38,6 +42,7 @@ suite("FlagIcon", function () {
     chai.assert(icon instanceof HTMLElement);
     chai.assert(icon instanceof FlagIcon);
     chai.assert.equal(icon.tagName, "FLAG-ICON");
+    chai.assert.equal(icon._constructorDidRun, true);
   });
 
   test("innerHTML", function () {
@@ -48,5 +53,6 @@ suite("FlagIcon", function () {
     chai.assert(icon instanceof HTMLElement);
     chai.assert(icon instanceof FlagIcon);
     chai.assert.equal(icon.tagName, "FLAG-ICON");
+    chai.assert.equal(icon._constructorDidRun, true);
   });
 });

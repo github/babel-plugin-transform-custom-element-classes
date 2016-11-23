@@ -1,5 +1,9 @@
 suite("FlagIcon", function() {
   class FlagIcon extends HTMLElement {
+    constructor() {
+      super()
+      this._constructorDidRun = true
+    }
   }
   customElements.define("flag-icon", FlagIcon)
 
@@ -8,6 +12,7 @@ suite("FlagIcon", function() {
     chai.assert(icon instanceof HTMLElement)
     chai.assert(icon instanceof FlagIcon)
     chai.assert.equal(icon.tagName, "FLAG-ICON")
+    chai.assert.equal(icon._constructorDidRun, true)
   })
 
   test("constructor", function() {
@@ -15,6 +20,7 @@ suite("FlagIcon", function() {
     chai.assert(icon instanceof HTMLElement)
     chai.assert(icon instanceof FlagIcon)
     chai.assert.equal(icon.tagName, "FLAG-ICON")
+    chai.assert.equal(icon._constructorDidRun, true)
   })
 
   test("innerHTML", function() {
@@ -25,5 +31,6 @@ suite("FlagIcon", function() {
     chai.assert(icon instanceof HTMLElement)
     chai.assert(icon instanceof FlagIcon)
     chai.assert.equal(icon.tagName, "FLAG-ICON")
+    chai.assert.equal(icon._constructorDidRun, true)
   })
 })
