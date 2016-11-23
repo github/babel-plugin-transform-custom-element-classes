@@ -12,12 +12,12 @@ A workaround is to use `Reflect.construct` to build a new `HTMLElement` instance
 
 ## Compatibility
 
-**Chrome** Works as is
-**Safari 10.1 Technology Preview** Works as is
-**Safari 10 Stable** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
-**Firefox** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
-**Edge** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
-**IE11** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements) and `Reflect.construct` polyfill
+* **Chrome** Works as is
+* **Safari 10.1 Technology Preview** Works as is
+* **Safari 10 Stable** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
+* **Firefox** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
+* **Edge** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
+* **IE11** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements) and `Reflect.construct` polyfill
 
 ## Installation
 
