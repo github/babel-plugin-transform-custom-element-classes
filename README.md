@@ -12,12 +12,15 @@ A workaround is to use `Reflect.construct` to build a new `HTMLElement` instance
 
 ## Compatibility
 
-* **Chrome** Works as is
-* **Safari 10.1 Technology Preview** Works as is
-* **Safari 10 Stable** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
-* **Firefox** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
-* **Edge** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
-* **IE11** Requires [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements) and `Reflect.construct` polyfill
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+Latest ✅ | ❌ | ❌ | ❌ | 10.1+ TP ✅ |
+
+### With [Custom Elements V1 polyfill](https://github.com/webcomponents/custom-elements)
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+Latest ✅ | Latest ✅ | 11 ✅ | Latest ✅ | 9.1+ ✅ |
 
 ## Installation
 
