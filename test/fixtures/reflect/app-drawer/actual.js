@@ -50,3 +50,19 @@ class AppDrawer extends HTMLElement {
 }
 
 customElements.define('app-drawer', AppDrawer);
+
+
+class FancyDrawer extends AppDrawer {
+  constructor() {
+    super(); // always call super() first in the ctor. This also calls the extended class' ctor.
+  }
+
+  toggleDrawer() {
+    super.toggleDrawer()
+  }
+
+  anotherMethod() {
+  }
+}
+
+customElements.define('fancy-app-drawer', FancyDrawer);
