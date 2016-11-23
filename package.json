@@ -4,6 +4,7 @@
   "description": "Compile ES6 HTMLElement class extensions to ES5",
   "main": "lib/index.js",
   "scripts": {
+    "pretest": "rm node_modules/babel-plugin-transform-custom-element-classes ; ln -fs .. node_modules/babel-plugin-transform-custom-element-classes",
     "test": "mocha"
   },
   "author": "GitHub, Inc",
