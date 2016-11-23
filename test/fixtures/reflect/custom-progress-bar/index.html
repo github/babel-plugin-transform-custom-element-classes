@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="expected.js"></script>
+<custom-progress-bar></custom-progress-bar>
+<script>
+for (let i = 0; i <= 10; i++) {
+    setTimeout(((i) => document.querySelector('custom-progress-bar').progress = i * 10).bind(this, i), i * 100);
+}
+</script>
+</body>
+</html>
